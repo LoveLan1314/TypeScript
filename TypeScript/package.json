@@ -3,6 +3,12 @@
   "name": "asp.net",
   "private": true,
   "devDependencies": {
+    "angular2": "2.0.0-beta.21",
+    "reflect-metadata": "0.1.12",
+    "rxjs": "6.2.1",
+    "rxjs-compat": "6.2.1",
+    "zone.js": "^0.8.26",
+    "systemjs": "0.21.4",
     "gulp": "3.9.1",
     "del": "3.0.0"
   }

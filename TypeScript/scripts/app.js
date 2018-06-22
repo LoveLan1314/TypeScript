@@ -13,20 +13,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("angular2/core");
 var model_1 = require("./model");
-var MyApp = /** @class */ (function () {
+var MyApp = (function () {
     function MyApp() {
         this.model = new model_1.MyModel();
     }
     MyApp.prototype.getCompiler = function () {
         return this.model.compiler;
     };
-    MyApp = __decorate([
-        core_1.Component({
-            selector: "my-app",
-            template: "<div>Hello from {{getCompiler()}}</div>"
-        })
-    ], MyApp);
     return MyApp;
 }());
+MyApp = __decorate([
+    core_1.Component({
+        selector: "my-app",
+        template: "<div>Hello from1 {{getCompiler()}}</div>"
+    })
+], MyApp);
 exports.MyApp = MyApp;
 //# sourceMappingURL=app.js.map

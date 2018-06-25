@@ -94,3 +94,67 @@ create(null);   // OK
 let someValue: any = "this is a string";
 //let strLength: number = (<string>someValue).length;
 let strLength: number = (someValue as string).length;
+
+let input: [number, number] = [1, 2];
+let [first, second] = input;
+console.log(first); // outputs 1
+console.log(second);    // outputs 2
+//first = input[0];
+//second = input[1];
+[first, second] = [second, first];
+function f([first, second]: [number, number]) {
+    console.log(first);
+    console.log(second);
+}
+f(input);
+
+let [rfirst, ...rest] = [1, 2, 3, 4];
+console.log(rfirst);    // outputs 1
+console.log(rest);  // outputs [ 2, 3, 4 ]
+
+let [afirst] = [1, 2, 3, 4];
+console.log(afirst);    // outputs 1
+let [, asecond, , afourth] = [1, 2, 3, 4];
+
+let o = {
+    a: "foo",
+    b: 12,
+    c: "bar"
+};
+//let { a, b } = o;
+
+let { a, ...passthrough } = o;
+let total = passthrough.b + passthrough.c.length;
+
+let { a: newName1, b: newName2 } = o;
+// 此处冒号不是指示类型的，想指定类型需要在后面写上完整的模式 let { a, b }: { a: string, b: number } = o;
+//let newName1 = o.a;
+//let newName2 = o.b;
+
+function keepWholeObject(wholeObject: { a: string, b?: string }) {
+    let { a, b = 1001 } = wholeObject;
+}
+
+type C = { a: string, b?: string };
+function f1({ a, b }: C): void {
+    // ...
+}
+
+function f2({ a, b } = { a: "", b: 0 }): void {
+    // ...
+}
+f2();   // ok, default to { a: "", b: 0 }
+
+function f3({ a,b = 0 } = { a: "" }): void {
+    // ...
+}
+f3({ a: "yes" });   // ok, default b = 0
+f3();   // ok, default to {a: ""}, which then defaults b = 0
+//f3({}); // error, 'a' is required if you supply an argument
+
+let bfirst = [1, 2];
+let bsecond = [3, 4];
+let bothPlus = [0, ...bfirst, ...bsecond, 5];
+
+let defaults = { food: "spicy", price: "$$", ambiance: "noisy" };
+let search = { ...defaults, food: "rich" };

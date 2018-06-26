@@ -146,5 +146,18 @@ var bsecond = [3, 4];
 var bothPlus = [0].concat(bfirst, bsecond, [5]);
 var defaults = { food: "spicy", price: "$$", ambiance: "noisy" };
 var search = __assign({}, defaults, { food: "rich" });
+var search2 = __assign({ food: "rich" }, defaults); // 最后food会被defaults中的属性重写
+var C1 = (function () {
+    function C1() {
+        this.p = 12;
+    }
+    C1.prototype.m = function () {
+    };
+    return C1;
+}());
+var c1 = new C1();
+var clone = __assign({}, c1);
+clone.p; // ok
 var _a;
+//clone.m();  // error! 
 //# sourceMappingURL=main.js.map

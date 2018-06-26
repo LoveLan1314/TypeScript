@@ -158,3 +158,15 @@ let bothPlus = [0, ...bfirst, ...bsecond, 5];
 
 let defaults = { food: "spicy", price: "$$", ambiance: "noisy" };
 let search = { ...defaults, food: "rich" };
+let search2 = { food: "rich", ...defaults };    // 最后food会被defaults中的属性重写
+
+class C1 {
+    p = 12;
+    m() {
+
+    }
+}
+let c1 = new C1();
+let clone = { ...c1 };
+clone.p;    // ok
+//clone.m();  // error!

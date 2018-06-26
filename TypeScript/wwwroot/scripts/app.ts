@@ -9,7 +9,7 @@ import { MyModel } from "./model";
 
 @Component({
     selector: `my-app`,
-    template: `<div>Hello from1 {{getCompiler()}}</div>`
+    template: `<div>Hello from {{getCompiler()}}</div>`
 })
 export class MyApp {
     model = new MyModel();

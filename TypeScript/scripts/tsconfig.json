@@ -15,7 +15,8 @@
   "files": [
     "./app.ts",
     "./model.ts",
-    "./main.ts"
+    "./main.ts",
+    "./interface.ts"
   ],
   "compileOnSave": true,
   "exclude": [

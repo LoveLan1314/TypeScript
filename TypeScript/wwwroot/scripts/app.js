@@ -25,7 +25,7 @@ var MyApp = (function () {
 MyApp = __decorate([
     core_1.Component({
         selector: "my-app",
-        template: "<div>Hello from1 {{getCompiler()}}</div>"
+        template: "<div>Hello from {{getCompiler()}}</div>"
     })
 ], MyApp);
 exports.MyApp = MyApp;

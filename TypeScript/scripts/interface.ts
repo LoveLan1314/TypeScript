@@ -19,6 +19,7 @@ printLebel(myObj);
 interface SquareConfig {
     color?: string;
     width?: number;
+    [propName: string]: any;
 }
 
 function createSquare(config: SquareConfig): { color: string, area: number } {
@@ -46,3 +47,7 @@ let ro: ReadonlyArray<number> = a;
 //ro.length = 100;    // error!
 //a = ro; // error!
 a = ro as number[];
+
+//let mySquare = createSquare({ colour: "red", width: 100 }); // error!
+let squareOptions = { colour: "red", width: 100 };
+let mySquare = createSquare(squareOptions);

@@ -25,4 +25,7 @@ var ro = a;
 //ro.length = 100;    // error!
 //a = ro; // error!
 a = ro;
+//let mySquare = createSquare({ colour: "red", width: 100 }); // error!
+var squareOptions = { colour: "red", width: 100 };
+var mySquare = createSquare(squareOptions);
 //# sourceMappingURL=interface.js.map

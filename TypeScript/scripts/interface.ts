@@ -51,3 +51,90 @@ a = ro as number[];
 //let mySquare = createSquare({ colour: "red", width: 100 }); // error!
 let squareOptions = { colour: "red", width: 100 };
 let mySquare = createSquare(squareOptions);
+
+interface SearchFunc {
+    (source: string, subString: string): boolean;
+}
+let mySearch: SearchFunc;
+mySearch = function (source: string, subString: string) {
+    let result = source.search(subString);
+    return result > -1;
+}
+//mySearch = function (src, sub) {
+//    let result = src.search(sub);
+//    return result > -1;
+//}
+
+interface StringArray {
+    [index: number]: string;
+}
+
+let myArray: StringArray;
+myArray = ["Bob", "Fred"];
+
+let myStr: string = myArray[0];
+
+class Animal {
+    name: string;
+}
+class Dog extends Animal {
+    breed: string;
+}
+
+// 错误：使用数值型的字符串索引，有时会得到完全不同的Animal！
+//interface NotOkay {
+//    [x: number]: Animal;
+//    [x: string]: Dog;
+//}
+
+interface NumberDictionary {
+    [index: string]: number;
+    length: number;     // 可以，length是number类型
+    //name: string;       // 错误，`name`的类型与索引类型返回值的类型不匹配
+}
+
+interface ReadonlyStringArray {
+    readonly [index: number]: string;
+}
+let myRArray: ReadonlyStringArray = ["Alice", "Bob"];
+//myRArray[2] = "Mallory";    // error!
+
+//interface ClockInterface {
+//    currentTime: Date;
+//    setTime(d: Date): void;
+//}
+
+//class Clock implements ClockInterface {
+//    currentTime: Date;
+//    setTime(d: Date) {
+//        this.currentTime = d;
+//    }
+//    constructor(h: number, m: number) { }
+//}
+
+interface ClockConstructor {
+    new (hour: number, minute: number): ClockInterface;
+}
+interface ClockInterface {
+    tick(): void;
+}
+
+function createClock(ctor: ClockConstructor, hour: number, minute: number): ClockInterface {
+    return new ctor(hour, minute);
+}
+
+class DigitalClock implements ClockInterface {
+    constructor(h: number, m: number) { }
+    tick() {
+        console.log("beep beep");
+    }
+}
+class AnalogClock implements ClockInterface {
+    constructor(h: number, m: number) { }
+    tick() {
+        console.log("tick tock");
+    }
+}
+
+let digital = createClock(DigitalClock, 12, 17);
+let analog = createClock(AnalogClock, 7, 32);

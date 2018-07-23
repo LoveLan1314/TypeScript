@@ -94,4 +94,31 @@ var c = getCounter();
 c(10);
 c.reset();
 c.interval = 5.0;
+var Control = (function () {
+    function Control() {
+    }
+    return Control;
+}());
+var Buttons = (function (_super) {
+    __extends(Buttons, _super);
+    function Buttons() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Buttons.prototype.select = function () { };
+    return Buttons;
+}(Control));
+var TextBox = (function (_super) {
+    __extends(TextBox, _super);
+    function TextBox() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    TextBox.prototype.select = function () { };
+    return TextBox;
+}(Control));
+// Error: Property 'state' is missing in type 'Image'
+//class Image implements SelectableControl {
+//    select() { }
+//}
+//class Location {
+//} 
 //# sourceMappingURL=interface.js.map

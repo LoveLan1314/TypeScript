@@ -212,4 +212,67 @@ var grid1 = new Grid(1.0); // 1x scale
 var grid2 = new Grid(5.0); // 5x scale
 console.log(grid1.calculateDistanceFromOrigin({ x: 10, y: 10 }));
 console.log(grid2.calculateDistanceFromOrigin({ x: 10, y: 10 }));
+var AbstractAnimal = (function () {
+    function AbstractAnimal() {
+    }
+    AbstractAnimal.prototype.move = function () {
+        console.log('roaming the earch...');
+    };
+    return AbstractAnimal;
+}());
+var AbstractDepartment = (function () {
+    function AbstractDepartment(name) {
+        this.name = name;
+    }
+    AbstractDepartment.prototype.printName = function () {
+        console.log('Department name:' + this.name);
+    };
+    return AbstractDepartment;
+}());
+var AccountingDepartment = (function (_super) {
+    __extends(AccountingDepartment, _super);
+    function AccountingDepartment() {
+        return _super.call(this, 'Accounting and Auditing') || this;
+    }
+    AccountingDepartment.prototype.printMeeting = function () {
+        console.log('The Accounting Department meets each Monday at 10am.');
+    };
+    AccountingDepartment.prototype.generateReports = function () {
+        console.log('Generating accounting reports...');
+    };
+    return AccountingDepartment;
+}(AbstractDepartment));
+var department; // 允许创建一个对抽象类型的引用
+//department = new AbstractDepartment();  // 错误：不能创建一个抽象类的实例
+department = new AccountingDepartment(); // 允许对一个抽象子类进行实例化和赋值
+department.printName();
+department.printMeeting();
+//department.generateReports();   // 错误：方法在声明的抽象类中不存在
+var Greeter1 = (function () {
+    function Greeter1() {
+    }
+    Greeter1.prototype.greet = function () {
+        if (this.greeting) {
+            return "Hello, " + this.greeting;
+        }
+        else {
+            return Greeter1.standardGreeting;
+        }
+    };
+    return Greeter1;
+}());
+Greeter1.standardGreeting = "Hello, there";
+var greeter1;
+greeter1 = new Greeter1();
+console.log(greeter1.greet());
+var greeterMaker = Greeter1;
+greeterMaker.standardGreeting = "Hey there!";
+var greeter2 = new greeterMaker();
+console.log(greeter2.greet());
+var Point1 = (function () {
+    function Point1() {
+    }
+    return Point1;
+}());
+var point3d = { x: 1, y: 2, z: 3 };
 //# sourceMappingURL=class.js.map

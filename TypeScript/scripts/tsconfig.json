@@ -17,7 +17,8 @@
     "./model.ts",
     "./main.ts",
     "./interface.ts",
-    "./class.ts"
+    "./class.ts",
+    "./function.ts"
   ],
   "compileOnSave": true,
   "exclude": [

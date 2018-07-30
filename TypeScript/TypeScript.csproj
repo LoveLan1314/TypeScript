@@ -9,6 +9,7 @@
     <None Remove="scripts\app.ts" />
     <None Remove="scripts\class.ts" />
     <None Remove="scripts\function.ts" />
+    <None Remove="scripts\generics.ts" />
     <None Remove="scripts\interface.ts" />
     <None Remove="scripts\main.ts" />
     <None Remove="scripts\model.ts" />
@@ -23,6 +24,7 @@
     <TypeScriptCompile Include="scripts\app.ts" />
     <TypeScriptCompile Include="scripts\class.ts" />
     <TypeScriptCompile Include="scripts\function.ts" />
+    <TypeScriptCompile Include="scripts\generics.ts" />
     <TypeScriptCompile Include="scripts\interface.ts" />
     <TypeScriptCompile Include="scripts\main.ts" />
     <TypeScriptCompile Include="scripts\model.ts" />

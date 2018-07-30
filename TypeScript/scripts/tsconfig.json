@@ -18,7 +18,8 @@
     "./main.ts",
     "./interface.ts",
     "./class.ts",
-    "./function.ts"
+    "./function.ts",
+    "./generics.ts"
   ],
   "compileOnSave": true,
   "exclude": [

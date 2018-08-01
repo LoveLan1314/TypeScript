@@ -8,6 +8,7 @@
   <ItemGroup>
     <None Remove="scripts\app.ts" />
     <None Remove="scripts\class.ts" />
+    <None Remove="scripts\enum.ts" />
     <None Remove="scripts\function.ts" />
     <None Remove="scripts\generics.ts" />
     <None Remove="scripts\interface.ts" />
@@ -23,6 +24,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="scripts\app.ts" />
     <TypeScriptCompile Include="scripts\class.ts" />
+    <TypeScriptCompile Include="scripts\enum.ts" />
     <TypeScriptCompile Include="scripts\function.ts" />
     <TypeScriptCompile Include="scripts\generics.ts" />
     <TypeScriptCompile Include="scripts\interface.ts" />

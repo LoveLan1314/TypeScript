@@ -19,7 +19,8 @@
     "./interface.ts",
     "./class.ts",
     "./function.ts",
-    "./generics.ts"
+    "./generics.ts",
+    "./enum.ts"
   ],
   "compileOnSave": true,
   "exclude": [

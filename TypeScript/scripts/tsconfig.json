@@ -20,7 +20,8 @@
     "./class.ts",
     "./function.ts",
     "./generics.ts",
-    "./enum.ts"
+    "./enum.ts",
+    "./type-inference.ts"
   ],
   "compileOnSave": true,
   "exclude": [

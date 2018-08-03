@@ -21,7 +21,8 @@
     "./function.ts",
     "./generics.ts",
     "./enum.ts",
-    "./type-inference.ts"
+    "./type-inference.ts",
+    "./type-compatibility.ts"
   ],
   "compileOnSave": true,
   "exclude": [

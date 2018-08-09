@@ -46,12 +46,12 @@ mySearch = function (source, subString) {
 var myArray;
 myArray = ["Bob", "Fred"];
 var myStr = myArray[0];
-var Animal = (function () {
+var Animal = /** @class */ (function () {
     function Animal() {
     }
     return Animal;
 }());
-var Dog = (function (_super) {
+var Dog = /** @class */ (function (_super) {
     __extends(Dog, _super);
     function Dog() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -62,7 +62,7 @@ var myRArray = ["Alice", "Bob"];
 function createClock(ctor, hour, minute) {
     return new ctor(hour, minute);
 }
-var DigitalClock = (function () {
+var DigitalClock = /** @class */ (function () {
     function DigitalClock(h, m) {
     }
     DigitalClock.prototype.tick = function () {
@@ -70,7 +70,7 @@ var DigitalClock = (function () {
     };
     return DigitalClock;
 }());
-var AnalogClock = (function () {
+var AnalogClock = /** @class */ (function () {
     function AnalogClock(h, m) {
     }
     AnalogClock.prototype.tick = function () {
@@ -94,12 +94,12 @@ var c = getCounter();
 c(10);
 c.reset();
 c.interval = 5.0;
-var Control = (function () {
+var Control = /** @class */ (function () {
     function Control() {
     }
     return Control;
 }());
-var Buttons = (function (_super) {
+var Buttons = /** @class */ (function (_super) {
     __extends(Buttons, _super);
     function Buttons() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -107,7 +107,7 @@ var Buttons = (function (_super) {
     Buttons.prototype.select = function () { };
     return Buttons;
 }(Control));
-var TextBox = (function (_super) {
+var TextBox = /** @class */ (function (_super) {
     __extends(TextBox, _super);
     function TextBox() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -120,5 +120,5 @@ var TextBox = (function (_super) {
 //    select() { }
 //}
 //class Location {
-//} 
+//}
 //# sourceMappingURL=interface.js.map

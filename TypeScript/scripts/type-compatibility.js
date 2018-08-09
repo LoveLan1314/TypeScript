@@ -1,4 +1,4 @@
-var Person2 = (function () {
+var Person2 = /** @class */ (function () {
     function Person2() {
     }
     return Person2;
@@ -55,18 +55,18 @@ var Color;
 ;
 var status1 = Status.Ready;
 //status = Color.Green;   //error
-var Animal7 = (function () {
+var Animal7 = /** @class */ (function () {
     function Animal7(name, numFeet) {
     }
     return Animal7;
 }());
-var Size7 = (function () {
+var Size7 = /** @class */ (function () {
     function Size7(numFeet) {
     }
     return Size7;
 }());
 var a7;
 var s7;
-a7 = s7; //OK
-s7 = a7; //OK
+//a7 = s7;    //OK
+//s7 = a7;    //OK
 //# sourceMappingURL=type-compatibility.js.map

@@ -8,7 +8,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var Greeter = (function () {
+var Greeter = /** @class */ (function () {
     function Greeter(message) {
         this.greeting = message;
     }
@@ -18,7 +18,7 @@ var Greeter = (function () {
     return Greeter;
 }());
 var greeter = new Greeter("world");
-var Animal1 = (function () {
+var Animal1 = /** @class */ (function () {
     function Animal1() {
     }
     Animal1.prototype.move = function (distanceInMeters) {
@@ -27,7 +27,7 @@ var Animal1 = (function () {
     };
     return Animal1;
 }());
-var Dog1 = (function (_super) {
+var Dog1 = /** @class */ (function (_super) {
     __extends(Dog1, _super);
     function Dog1() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -41,7 +41,7 @@ var dog = new Dog1();
 dog.bark();
 dog.move(10);
 dog.bark();
-var Animal2 = (function () {
+var Animal2 = /** @class */ (function () {
     function Animal2(theName) {
         this.name = theName;
     }
@@ -51,7 +51,7 @@ var Animal2 = (function () {
     };
     return Animal2;
 }());
-var Snake = (function (_super) {
+var Snake = /** @class */ (function (_super) {
     __extends(Snake, _super);
     function Snake(name) {
         return _super.call(this, name) || this;
@@ -63,7 +63,7 @@ var Snake = (function (_super) {
     };
     return Snake;
 }(Animal2));
-var Horse = (function (_super) {
+var Horse = /** @class */ (function (_super) {
     __extends(Horse, _super);
     function Horse(name) {
         return _super.call(this, name) || this;
@@ -79,27 +79,27 @@ var sam = new Snake("Sammy the Python");
 var tom = new Horse("Tommy the Palomino");
 sam.move();
 tom.move(34);
-var Animal3 = (function () {
+var Animal3 = /** @class */ (function () {
     function Animal3(theName) {
         this.name = theName;
     }
     return Animal3;
 }());
 //new Animal3("Cat").name;    // 错误：'name'是私有的
-var Animal4 = (function () {
+var Animal4 = /** @class */ (function () {
     function Animal4(theName) {
         this.name = theName;
     }
     return Animal4;
 }());
-var Rhino = (function (_super) {
+var Rhino = /** @class */ (function (_super) {
     __extends(Rhino, _super);
     function Rhino() {
         return _super.call(this, "Rhino") || this;
     }
     return Rhino;
 }(Animal4));
-var Employee = (function () {
+var Employee = /** @class */ (function () {
     function Employee(theName) {
         this.name = theName;
     }
@@ -110,13 +110,13 @@ var rhino = new Rhino();
 var employee = new Employee("Bob");
 animal4 = rhino;
 //animal4 = employee; // 错误：Animal 与 Employee 不兼容.
-var Person = (function () {
+var Person = /** @class */ (function () {
     function Person(name) {
         this.name = name;
     }
     return Person;
 }());
-var Employee1 = (function (_super) {
+var Employee1 = /** @class */ (function (_super) {
     __extends(Employee1, _super);
     function Employee1(name, department) {
         var _this = _super.call(this, name) || this;
@@ -131,14 +131,14 @@ var Employee1 = (function (_super) {
 var howard = new Employee1("Howard", "Sales");
 console.log(howard.getElevatorPitch());
 //console.log(howard.name);   // 错误
-var Person1 = (function () {
+var Person1 = /** @class */ (function () {
     function Person1(theName) {
         this.name = theName;
     }
     return Person1;
 }());
 // Employee 能够继承 Person
-var Employee2 = (function (_super) {
+var Employee2 = /** @class */ (function (_super) {
     __extends(Employee2, _super);
     function Employee2(name, department) {
         var _this = _super.call(this, name) || this;
@@ -152,7 +152,7 @@ var Employee2 = (function (_super) {
 }(Person1));
 var howard1 = new Employee2("howard", "Sales");
 //let john = new Person1("John"); // 错误： 'Person' 的构造函数是被保护的.
-var Octopus = (function () {
+var Octopus = /** @class */ (function () {
     function Octopus(theName) {
         this.numberOfLegs = 8;
         this.name = theName;
@@ -161,7 +161,7 @@ var Octopus = (function () {
 }());
 var dad = new Octopus("Man with the 8 strong legs");
 //dad.name = "Man with the 3-piece suit"; // 错误！ name 是只读的.
-var Animal5 = (function () {
+var Animal5 = /** @class */ (function () {
     function Animal5(name) {
         this.name = name;
     }
@@ -171,7 +171,7 @@ var Animal5 = (function () {
     return Animal5;
 }());
 var passcode = "secret passcode";
-var Employee3 = (function () {
+var Employee3 = /** @class */ (function () {
     function Employee3() {
     }
     Object.defineProperty(Employee3.prototype, "fullName", {
@@ -196,7 +196,7 @@ employee3.fullName = "Bob Smith";
 if (employee3.fullName) {
     alert(employee3.fullName);
 }
-var Grid = (function () {
+var Grid = /** @class */ (function () {
     function Grid(scale) {
         this.scale = scale;
     }
@@ -205,14 +205,14 @@ var Grid = (function () {
         var yDist = (point.y - Grid.origin.y);
         return Math.sqrt(xDist * xDist + yDist * yDist) / this.scale;
     };
+    Grid.origin = { x: 0, y: 0 };
     return Grid;
 }());
-Grid.origin = { x: 0, y: 0 };
 var grid1 = new Grid(1.0); // 1x scale
 var grid2 = new Grid(5.0); // 5x scale
 console.log(grid1.calculateDistanceFromOrigin({ x: 10, y: 10 }));
 console.log(grid2.calculateDistanceFromOrigin({ x: 10, y: 10 }));
-var AbstractAnimal = (function () {
+var AbstractAnimal = /** @class */ (function () {
     function AbstractAnimal() {
     }
     AbstractAnimal.prototype.move = function () {
@@ -220,7 +220,7 @@ var AbstractAnimal = (function () {
     };
     return AbstractAnimal;
 }());
-var AbstractDepartment = (function () {
+var AbstractDepartment = /** @class */ (function () {
     function AbstractDepartment(name) {
         this.name = name;
     }
@@ -229,7 +229,7 @@ var AbstractDepartment = (function () {
     };
     return AbstractDepartment;
 }());
-var AccountingDepartment = (function (_super) {
+var AccountingDepartment = /** @class */ (function (_super) {
     __extends(AccountingDepartment, _super);
     function AccountingDepartment() {
         return _super.call(this, 'Accounting and Auditing') || this;
@@ -248,7 +248,7 @@ department = new AccountingDepartment(); // 允许对一个抽象子类进行实
 department.printName();
 department.printMeeting();
 //department.generateReports();   // 错误：方法在声明的抽象类中不存在
-var Greeter1 = (function () {
+var Greeter1 = /** @class */ (function () {
     function Greeter1() {
     }
     Greeter1.prototype.greet = function () {
@@ -259,9 +259,9 @@ var Greeter1 = (function () {
             return Greeter1.standardGreeting;
         }
     };
+    Greeter1.standardGreeting = "Hello, there";
     return Greeter1;
 }());
-Greeter1.standardGreeting = "Hello, there";
 var greeter1;
 greeter1 = new Greeter1();
 console.log(greeter1.greet());
@@ -269,7 +269,7 @@ var greeterMaker = Greeter1;
 greeterMaker.standardGreeting = "Hey there!";
 var greeter2 = new greeterMaker();
 console.log(greeter2.greet());
-var Point1 = (function () {
+var Point1 = /** @class */ (function () {
     function Point1() {
     }
     return Point1;

@@ -75,5 +75,5 @@ class Size7 {
 let a7: Animal7;
 let s7: Size7;
 
-a7 = s7;    //OK
-s7 = a7;    //OK
+//a7 = s7;    //OK
+//s7 = a7;    //OK

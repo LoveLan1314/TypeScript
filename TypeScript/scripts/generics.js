@@ -31,7 +31,7 @@ var myIdentity = identity;
 var myIdentity1 = identity;
 var myIdentity2 = identity;
 var myIndentity3 = identity;
-var GenericNumber = (function () {
+var GenericNumber = /** @class */ (function () {
     function GenericNumber() {
     }
     return GenericNumber;
@@ -58,29 +58,29 @@ getProperty(x, "a"); // okay
 function create(c) {
     return new c();
 }
-var BeeKeeper = (function () {
+var BeeKeeper = /** @class */ (function () {
     function BeeKeeper() {
     }
     return BeeKeeper;
 }());
-var ZooKeeper = (function () {
+var ZooKeeper = /** @class */ (function () {
     function ZooKeeper() {
     }
     return ZooKeeper;
 }());
-var Animal6 = (function () {
+var Animal6 = /** @class */ (function () {
     function Animal6() {
     }
     return Animal6;
 }());
-var Bee = (function (_super) {
+var Bee = /** @class */ (function (_super) {
     __extends(Bee, _super);
     function Bee() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     return Bee;
 }(Animal6));
-var Lion = (function (_super) {
+var Lion = /** @class */ (function (_super) {
     __extends(Lion, _super);
     function Lion() {
         return _super !== null && _super.apply(this, arguments) || this;

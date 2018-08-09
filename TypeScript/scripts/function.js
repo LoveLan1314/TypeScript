@@ -53,7 +53,7 @@ var deck1 = {
 var cardPicker1 = deck1.createCardPicker();
 var pickedCard1 = cardPicker1();
 alert("card: " + pickedCard1.card + " of " + pickedCard1.suit);
-var Handler = (function () {
+var Handler = /** @class */ (function () {
     function Handler() {
     }
     Handler.prototype.onClickBad = function (e) {
@@ -71,6 +71,7 @@ function pickCard(x) {
         var pickedCard_1 = Math.floor(Math.random() * x.length);
         return pickedCard_1;
     }
+    // Otherwise just let them pick the card
     else if (typeof x == "number") {
         var pickedSuit = Math.floor(x / 13);
         return { suit: suits[pickedSuit], card: x % 13 };

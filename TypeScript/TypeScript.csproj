@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +15,7 @@
     <None Remove="scripts\interface.ts" />
     <None Remove="scripts\main.ts" />
     <None Remove="scripts\model.ts" />
+    <None Remove="scripts\symbols.ts" />
     <None Remove="scripts\type-compatibility.ts" />
     <None Remove="scripts\type-inference.ts" />
   </ItemGroup>
@@ -34,10 +35,27 @@
     <TypeScriptCompile Include="scripts\interface.ts" />
     <TypeScriptCompile Include="scripts\main.ts" />
     <TypeScriptCompile Include="scripts\model.ts" />
+    <TypeScriptCompile Include="scripts\symbols.ts" />
     <TypeScriptCompile Include="scripts\type-compatibility.ts" />
     <TypeScriptCompile Include="scripts\type-inference.ts" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties scripts_4tsconfig_1json__JSONSchema="" package_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES2016</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
 
 </Project>

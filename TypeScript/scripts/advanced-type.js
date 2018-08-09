@@ -22,13 +22,13 @@ var AdvancedType;
         }
         return result;
     }
-    var Person = (function () {
+    var Person = /** @class */ (function () {
         function Person(name) {
             this.name = name;
         }
         return Person;
     }());
-    var ConsoleLogger = (function () {
+    var ConsoleLogger = /** @class */ (function () {
         function ConsoleLogger() {
         }
         ConsoleLogger.prototype.log = function () {
@@ -104,7 +104,7 @@ var AdvancedType;
         }
         throw new Error("Expected string or number, got '" + padding + "'");
     }
-    var SpaceRepeatingPadder = (function () {
+    var SpaceRepeatingPadder = /** @class */ (function () {
         function SpaceRepeatingPadder(numSpaces) {
             this.numSpaces = numSpaces;
         }
@@ -113,7 +113,7 @@ var AdvancedType;
         };
         return SpaceRepeatingPadder;
     }());
-    var StringPadder = (function () {
+    var StringPadder = /** @class */ (function () {
         function StringPadder(value) {
             this.value = value;
         }
@@ -145,7 +145,7 @@ var AdvancedType;
     f(1);
     f(1, undefined);
     //f(1, null); // error, 'null' is not assignable to 'number | undefined'
-    var C = (function () {
+    var C = /** @class */ (function () {
         function C() {
         }
         return C;
@@ -169,7 +169,7 @@ var AdvancedType;
     }
     function broken(name) {
         function postfix(epithet) {
-            return '.  the ' + epithet; // error, 'name' is possibly null
+            return /*name.charAt(0) + */ '.  the ' + epithet; // error, 'name' is possibly null
         }
         name = name || "Bob";
         return postfix("great");
@@ -189,7 +189,7 @@ var AdvancedType;
             return n();
         }
     }
-    var UIElement = (function () {
+    var UIElement = /** @class */ (function () {
         function UIElement() {
         }
         UIElement.prototype.animate = function (dx, dy, easing) {
@@ -220,9 +220,10 @@ var AdvancedType;
             case "square": return s.size * s.size;
             case "rectangle": return s.height * s.width;
             case "circle": return Math.PI * Math.pow(s.radius, 2);
+            //default: return assertNever(s); // error here if there are missing cases
         }
     }
-    var BasicCalculator = (function () {
+    var BasicCalculator = /** @class */ (function () {
         function BasicCalculator(value) {
             if (value === void 0) { value = 0; }
             this.value = value;
@@ -241,7 +242,7 @@ var AdvancedType;
         return BasicCalculator;
     }());
     var v = new BasicCalculator(2).multiply(5).add(1).currentValue();
-    var ScientificCalculator = (function (_super) {
+    var ScientificCalculator = /** @class */ (function (_super) {
         __extends(ScientificCalculator, _super);
         function ScientificCalculator(value) {
             if (value === void 0) { value = 0; }

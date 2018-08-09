@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var MyModel = (function () {
+var MyModel = /** @class */ (function () {
     function MyModel() {
         this.compiler = "TypeScript";
     }

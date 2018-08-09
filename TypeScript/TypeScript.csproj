@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="scripts\advanced-type.ts" />
     <None Remove="scripts\app.ts" />
     <None Remove="scripts\class.ts" />
     <None Remove="scripts\enum.ts" />
@@ -24,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="scripts\advanced-type.ts" />
     <TypeScriptCompile Include="scripts\app.ts" />
     <TypeScriptCompile Include="scripts\class.ts" />
     <TypeScriptCompile Include="scripts\enum.ts" />

@@ -5,6 +5,7 @@
     "sourceMap": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "strictNullChecks": true,
     "target": "es5",
     "lib": [
       "es2015",
@@ -22,7 +23,8 @@
     "./generics.ts",
     "./enum.ts",
     "./type-inference.ts",
-    "./type-compatibility.ts"
+    "./type-compatibility.ts",
+    "./advanced-type.ts"
   ],
   "compileOnSave": true,
   "exclude": [

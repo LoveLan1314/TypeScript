@@ -1,6 +1,4 @@
-﻿import { Set } from "angular2/src/facade/collection";
-
-namespace Symbols {
+﻿namespace Symbols {
     let sym1 = Symbol();
 
     let sym2 = Symbol("key");
